@@ -32,6 +32,7 @@
 *.app
 
 # visual stdio
+*.opensdf
 *.sln
 *.suo
 *.vcxproj
