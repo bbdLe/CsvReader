@@ -35,7 +35,6 @@ private:
     istream& fin;
     string line;
     vector<string> field;
-    int nfield;
     string fieldsep;
 };
 
