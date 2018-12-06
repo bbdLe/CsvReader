@@ -3,6 +3,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+#include "eprintf.h"
 
 #define NOMEM -2
 

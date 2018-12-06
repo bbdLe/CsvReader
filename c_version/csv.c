@@ -118,6 +118,7 @@ char* csvgetline(FILE* fin)
 			if (news == NULL || newl == NULL)
 			{
 				reset();
+                eprintf("Failed alloc memory : %u", maxline);
 				return NULL;
 			}
 			line = newl;
@@ -131,6 +132,7 @@ char* csvgetline(FILE* fin)
 	if (split() == NOMEM)
 	{
 		reset();
+        eprintf("Failed alloc memory");
 		return NULL;
 	}
 
@@ -146,6 +148,7 @@ char* csvfield(int n)
 {
 	if (n < 0 || n >= nfield)
 	{
+        weprintf("Wrong Index %d", n);
 		return NULL;
 	}
 
@@ -154,6 +157,7 @@ char* csvfield(int n)
 
 int main(int argc, char** argv)
 {
+    setprogram("csv");
 	int i;
 	char* line;
 
